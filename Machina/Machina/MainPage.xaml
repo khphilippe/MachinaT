@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             mc:Ignorable="d"
+             BackgroundImageSource="background.png"
+             x:Class="Machina.MainPage">
+
+    <StackLayout VerticalOptions="Center">
+
+        <forms:AnimationView 
+	        x:Name="animationView" 
+	        Animation="face-scan.json" 
+	        Loop="True" 
+	        AutoPlay="True"
+	        ClickedCommand="{Binding AnimationClickedCommand}"
+            WidthRequest="200"
+            HeightRequest="200"
+            BackgroundColor="Transparent"
+	        VerticalOptions="Center" 
+	        HorizontalOptions="Center" />
+
+        <Button Text="Appuyez ici pour commencer" 
+                HorizontalOptions="Center"
+                BackgroundColor="Transparent" 
+                Clicked="StartButtonClicked"
+                TextColor="White"/>
+    </StackLayout>
+
+</ContentPage>
